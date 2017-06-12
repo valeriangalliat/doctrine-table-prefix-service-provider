@@ -2,19 +2,15 @@
 
 namespace Val\Silex\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Val\Pimple\Provider\DoctrineTablePrefixServiceProvider as PimpleDoctrineTablePrefixServiceProvider;
 
 class DoctrineTablePrefixServiceProvider implements ServiceProviderInterface
 {
-    public function register(Application $app)
+    public function register(Container $app)
     {
         $pimpleServiceProvider = new PimpleDoctrineTablePrefixServiceProvider();
         $pimpleServiceProvider->register($app);
-    }
-
-    public function boot(Application $app)
-    {
     }
 }

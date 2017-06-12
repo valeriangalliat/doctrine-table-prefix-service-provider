@@ -3,20 +3,23 @@
     "description": "Doctrine event listener to dynamically add a table prefix.",
     "keywords": ["pimple", "cilex", "silex", "doctrine", "table", "prefix"],
     "license": "Unlicense",
-
     "authors": [{
         "name": "Valérian Galliat"
     }],
-
     "autoload": {
         "psr-4": {
             "Val\\": "src/"
         }
     },
-
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
+    },
+    "require-dev": {
+        "pimple/pimple": "~3.0",
+        "cilex/cilex": "~2.0",
+        "doctrine/orm": "~2.0",
+        "silex/silex": "~2.0"
     }
 }
